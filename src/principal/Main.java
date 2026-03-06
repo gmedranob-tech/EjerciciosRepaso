@@ -218,9 +218,9 @@ public class Main {
 
 	        switch(opcion) {
 
-	            case 1: ejercicio6(); break;
-	            case 2: ejercicio7(); break;
-	            case 3: ejercicio8(); break;
+	            case 1: multiplo7o11(); break;
+	            case 2: divisibles3No2(); break;
+	            case 3: horarioDia(); break;
 
 	        }
 
@@ -228,9 +228,65 @@ public class Main {
 
 	}
 	
-	public static void ejercicio6() {}
-	public static void ejercicio7() {}
-	public static void ejercicio8() {}
+	
+	public static void multiplo7o11() {
+
+		    int n;
+
+		    System.out.print("Ingrese un numero: ");
+		    n = sc.nextInt();
+
+		    if(n % 7 == 0 || n % 11 == 0) {
+		        System.out.println("El numero es multiplo de 7 o de 11");
+		    }
+		    else {
+		        System.out.println("El numero NO es multiplo de 7 ni de 11");
+		    }
+
+		}
+	
+	public static void divisibles3No2() {
+
+		    int n;
+
+		    System.out.print("Ingrese un numero: ");
+		    n = sc.nextInt();
+
+		    System.out.println("Numeros divisibles entre 3 pero no entre 2:");
+
+		    for(int i = 1; i <= n; i++) {
+
+		        if(i % 3 == 0 && i % 2 != 0) {
+		            System.out.println(i);
+		        }
+
+		    }
+
+		}
+	
+	
+	public static void horarioDia() {
+
+		    int hora;
+
+		    System.out.print("Ingrese la hora (0-23): ");
+		    hora = sc.nextInt();
+
+		    if(hora >= 0 && hora <= 11) {
+		        System.out.println("Mañana");
+		    }
+		    else if(hora >= 12 && hora <= 17) {
+		        System.out.println("Tarde");
+		    }
+		    else if(hora >= 18 && hora <= 23) {
+		        System.out.println("Noche");
+		    }
+		    else {
+		        System.out.println("Hora invalida");
+		    }
+
+		}
+	
 	
 	//SUBMENU PARTE 3
 	public static void menuParte3() {
