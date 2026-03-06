@@ -117,8 +117,71 @@ public class Main {
 		}
 	
 	
-	public static void ejercicio3() {}
-	public static void ejercicio4() {}
+	public static void ejercicio3() {
+
+		    int n;
+		    int numero;
+		    int positivos = 0;
+		    int negativos = 0;
+		    int ceros = 0;
+
+		    Scanner teclado = new Scanner(System.in);
+
+		    System.out.print("Ingrese la cantidad de numeros: ");
+		    n = teclado.nextInt();
+
+		    for(int i = 1; i <= n; i++) {
+
+		        System.out.print("Ingrese un numero: ");
+		        numero = teclado.nextInt();
+
+		        if(numero > 0) {
+		            positivos++;
+		        }
+		        else if(numero < 0) {
+		            negativos++;
+		        }
+		        else {
+		            ceros++;
+		        }
+
+		    }
+
+		    System.out.println("Cantidad de positivos: " + positivos);
+		    System.out.println("Cantidad de negativos: " + negativos);
+		    System.out.println("Cantidad de ceros: " + ceros);
+
+		}
+				
+	public static void ejercicio4() {
+
+		    Scanner teclado = new Scanner(System.in);
+
+		    int n;
+		    int suma = 0;
+		    int contador = 0;
+
+		    System.out.print("Ingrese un numero n: ");
+		    n = teclado.nextInt();
+
+		    for(int i = 1; i <= n; i++) {
+
+		        if(i % 2 == 0) {
+		            suma = suma + i;
+		            contador++;
+		        }
+
+		    }
+
+		    if(contador > 0) {
+		        double promedio = (double)suma / contador;
+		        System.out.println("El promedio de los numeros pares es: " + promedio);
+		    } else {
+		        System.out.println("No hay numeros pares en el rango.");
+		    }
+
+		}
+	
 	public static void ejercicio5() {}
 	
 	
