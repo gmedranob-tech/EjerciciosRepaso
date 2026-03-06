@@ -559,11 +559,11 @@ public class Main {
 
 	        switch(opcion) {
 
-	            case 1: ejercicio16(); break;
-	            case 2: ejercicio17(); break;
-	            case 3: ejercicio18(); break;
-	            case 4: ejercicio19(); break;
-	            case 5: ejercicio20(); break;
+	            case 1: multiplosde6(); break;
+	            case 2: potenciaDe2(); break;
+	            case 3: numeroInvertido(); break;
+	            case 4: parOimpar(); break;
+	            case 5: temperatura(); break;
 
 	        }
 
@@ -571,13 +571,102 @@ public class Main {
 
 	}
 	 
-	public static void ejercicio16() {}
-	public static void ejercicio17() {}
-	public static void ejercicio18() {}
-	public static void ejercicio19() {}
-	public static void ejercicio20() {}
+	//EJERCICIO 16
+	public static void multiplosde6() {
 
+		    int n;
+
+		    System.out.print("Ingrese un número: ");
+		    n = sc.nextInt();
+
+		    System.out.println("Los primeros " + n + " múltiplos de 6 son:");
+
+		    for (int i = 1; i <= n; i++) {
+		        int multiplo = 6 * i;
+		        System.out.println(multiplo);
+		    }
+		}
+	
+	//EJERCICIO 17
+	public static void potenciaDe2() {
+
+		    int n;
+		    boolean esPotencia = false;
+
+		    System.out.print("Ingrese un número: ");
+		    n = sc.nextInt();
+
+		    int valor = 1;
+
+		    while (valor <= n) {
+
+		        if (valor == n) {
+		            esPotencia = true;
+		            break;
+		        }
+
+		        valor = valor * 2;
+		    }
+
+		    if (esPotencia) {
+		        System.out.println(n + " es potencia de 2");
+		    } else {
+		        System.out.println(n + " no es potencia de 2");
+		    }
+		}
+	
+	//EJERCICIO 18
+	public static void numeroInvertido() {
+
+		    int n, digito, invertido = 0;
+
+		    System.out.print("Ingrese un número: ");
+		    n = sc.nextInt();
+
+		    while (n > 0) {
+
+		        digito = n % 10;
+		        invertido = invertido * 10 + digito;
+		        n = n / 10;
+		    }
+
+		    System.out.println("Número invertido: " + invertido);
+		}
+
+	//EJERCICI 19
+	public static void parOimpar() {
+
+		    int n, suma = 0;
+
+		    System.out.print("Ingrese un número: ");
+		    n = sc.nextInt();
+
+		    for (int i = 1; i <= n; i++) {
+		        suma = suma + i;
+		    }
+
+		    if (suma % 2 == 0) {
+		        System.out.println("La suma es PAR");
+		    } else {
+		        System.out.println("La suma es IMPAR");
+		    }
+		}
+	
+	//EJERCICIO 20
+	public static void temperatura() {
+
+		    double celsius, fahrenheit;
+
+		    System.out.print("Ingrese temperatura en Celsius: ");
+		    celsius = sc.nextDouble();
+
+		    fahrenheit = (celsius * 9 / 5) + 32;
+
+		    System.out.println("Temperatura en Fahrenheit: " + fahrenheit);
+		}
 	}
+
+	
 	
 	
 	
