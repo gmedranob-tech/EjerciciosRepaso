@@ -97,8 +97,26 @@ public class Main {
 
 		}
 
+	// EJERCICIO 2
+	public static void ejercicio2() {
+
+		    int n;
+		    long factorial = 1;
+
+		    System.out.print("Ingrese un numero: ");
+		    n = sc.nextInt();
+
+		    for(int i = 1; i <= n; i++) {
+
+		        factorial = factorial * i;
+
+		    }
+
+		    System.out.println("El factorial de " + n + " es: " + factorial);
+
+		}
 	
-	public static void ejercicio2() {}
+	
 	public static void ejercicio3() {}
 	public static void ejercicio4() {}
 	public static void ejercicio5() {}
