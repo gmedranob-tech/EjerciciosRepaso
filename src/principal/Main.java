@@ -228,7 +228,7 @@ public class Main {
 
 	}
 	
-	
+	// EJERCICIO 6
 	public static void multiplo7o11() {
 
 		    int n;
@@ -245,6 +245,7 @@ public class Main {
 
 		}
 	
+	// EJERCICIO 7
 	public static void divisibles3No2() {
 
 		    int n;
@@ -264,7 +265,7 @@ public class Main {
 
 		}
 	
-	
+	// EJERCICIO 8
 	public static void horarioDia() {
 
 		    int hora;
@@ -305,8 +306,8 @@ public class Main {
 
 	        switch(opcion) {
 
-	            case 1: ejercicio9(); break;
-	            case 2: ejercicio10(); break;
+	            case 1: numeroRomano(); break;
+	            case 2: calculadora(); break;
 
 	        }
 
@@ -314,8 +315,61 @@ public class Main {
 
 	}
 	
-	public static void ejercicio9() {}
-	public static void ejercicio10() {}
+	// EJERCICIO 9
+		public static void numeroRomano() {
+
+		    int num;
+
+		    System.out.print("Ingrese un numero del 1 al 5: ");
+		    num = sc.nextInt();
+
+		    switch(num) {
+
+		        case 1: System.out.println("I");break;
+		        case 2: System.out.println("II");break;
+		        case 3: System.out.println("III");break;
+		        case 4: System.out.println("IV");break;
+		        case 5: System.out.println("V");break;
+		        default:System.out.println("Numero invalido");
+		    }
+
+		}
+	
+		public static void calculadora() {
+
+		    int opcion;
+		    double num1;
+		    double num2;
+		    double resultado;
+
+		    System.out.println("1. Sumar");
+		    System.out.println("2. Restar");
+		    System.out.println("3. Multiplicar");
+
+		    System.out.print("Seleccione una opcion: ");
+		    opcion = sc.nextInt();
+
+		    System.out.print("Ingrese el primer numero: ");
+		    num1 = sc.nextDouble();
+
+		    System.out.print("Ingrese el segundo numero: ");
+		    num2 = sc.nextDouble();
+
+		    switch(opcion) {
+
+		        case 1:resultado = num1 + num2;
+	            System.out.println("Resultado: " + resultado); break;
+		        
+		        case 2:resultado = num1 - num2;
+	            System.out.println("Resultado: " + resultado);  break;
+	            
+		        case 3:resultado = num1 * num2;
+	            System.out.println("Resultado: " + resultado); break;
+	            
+		        default:System.out.println("Opcion invalida");    
+		    }
+
+		}
 	
 	
 	//SUBMENU PARTE 4
