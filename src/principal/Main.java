@@ -36,7 +36,7 @@ public class Main {
             case 3:menuParte3(); break;
             case 4:menuParte4(); break;
             case 5:menuParte5();break;
-            case 6:System.out.println("Saliendo del programa...");  break;
+            case 6:System.out.println("Gracias por utilizar el programa...");  break;
             default:
                 System.out.println("Opcion invalida");
         }
@@ -75,8 +75,29 @@ public class Main {
 	    } while(opcion != 6);
 
 	}  
-			
-	public static void ejercicio1() {}
+	
+	// EJERCICIO 1		
+	public static void ejercicio1() {
+
+		    int n;
+		    int suma = 0;
+
+		    System.out.print("Ingrese un numero: ");
+		    n = sc.nextInt();
+
+		    for(int i = 1; i <= n; i++) {
+
+		        if(i % 4 == 0) {
+		            suma = suma + i;
+		        }
+
+		    }
+
+		    System.out.println("La suma de los numeros divisibles entre 4 es: " + suma);
+
+		}
+
+	
 	public static void ejercicio2() {}
 	public static void ejercicio3() {}
 	public static void ejercicio4() {}
