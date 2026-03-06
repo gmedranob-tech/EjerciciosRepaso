@@ -118,27 +118,25 @@ public class Main {
 	
 	
 	public static void ejercicio3() {
-
+		
 		    int n;
-		    int numero;
+		    int num;
 		    int positivos = 0;
 		    int negativos = 0;
 		    int ceros = 0;
 
-		    Scanner teclado = new Scanner(System.in);
-
 		    System.out.print("Ingrese la cantidad de numeros: ");
-		    n = teclado.nextInt();
+		    n = sc.nextInt();
 
 		    for(int i = 1; i <= n; i++) {
 
 		        System.out.print("Ingrese un numero: ");
-		        numero = teclado.nextInt();
+		        num = sc.nextInt();
 
-		        if(numero > 0) {
+		        if(num > 0) {
 		            positivos++;
 		        }
-		        else if(numero < 0) {
+		        else if(num < 0) {
 		            negativos++;
 		        }
 		        else {
@@ -147,22 +145,20 @@ public class Main {
 
 		    }
 
-		    System.out.println("Cantidad de positivos: " + positivos);
-		    System.out.println("Cantidad de negativos: " + negativos);
-		    System.out.println("Cantidad de ceros: " + ceros);
+		    System.out.println("Positivos: " + positivos);
+		    System.out.println("Negativos: " + negativos);
+		    System.out.println("Ceros: " + ceros);
 
-		}
-				
+		}	
+	
 	public static void ejercicio4() {
-
-		    Scanner teclado = new Scanner(System.in);
 
 		    int n;
 		    int suma = 0;
 		    int contador = 0;
 
 		    System.out.print("Ingrese un numero n: ");
-		    n = teclado.nextInt();
+		    n = sc.nextInt();
 
 		    for(int i = 1; i <= n; i++) {
 
@@ -176,13 +172,32 @@ public class Main {
 		    if(contador > 0) {
 		        double promedio = (double)suma / contador;
 		        System.out.println("El promedio de los numeros pares es: " + promedio);
-		    } else {
-		        System.out.println("No hay numeros pares en el rango.");
+		    }
+		    else {
+		        System.out.println("No hay numeros pares.");
 		    }
 
 		}
-	
-	public static void ejercicio5() {}
+			
+	public static void ejercicio5() {
+		
+		    int n;
+		    int suma = 0;
+
+		    System.out.print("Ingrese un numero: ");
+		    n = sc.nextInt();
+
+		    while(n > 0) {
+
+		        int digito = n % 10;
+		        suma = suma + digito;
+		        n = n / 10;
+
+		    }
+
+		    System.out.println("La suma de los digitos es: " + suma);
+
+		}
 	
 	
 	// SUBMENU PARTE 2
