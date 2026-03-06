@@ -335,6 +335,7 @@ public class Main {
 
 		}
 	
+		// EJERCICIO 10
 		public static void calculadora() {
 
 		    int opcion;
@@ -392,11 +393,11 @@ public class Main {
 
 	        switch(opcion) {
 
-	            case 1: ejercicio11(); break;
-	            case 2: ejercicio12(); break;
-	            case 3: ejercicio13(); break;
-	            case 4: ejercicio14(); break;
-	            case 5: ejercicio15(); break;
+	            case 1: mayorMenorDiferencia(); break;
+	            case 2: tablaDivision(); break;
+	            case 3: contarDigitosPares(); break;
+	            case 4: numeroTriangular(); break;
+	            case 5: promedioNegativos(); break;
 
 	        }
 
@@ -404,11 +405,139 @@ public class Main {
 
 	}
 	
-	public static void ejercicio11() {}
-	public static void ejercicio12() {}
-	public static void ejercicio13() {}
-	public static void ejercicio14() {}
-	public static void ejercicio15() {}	
+	// EJERCICIO 11
+	public static void mayorMenorDiferencia() {
+
+		    int a;
+		    int b;
+
+		    System.out.print("Ingrese el primer numero: ");
+		    a = sc.nextInt();
+
+		    System.out.print("Ingrese el segundo numero: ");
+		    b = sc.nextInt();
+
+		    if(a > b) {
+		        System.out.println("Mayor: " + a);
+		        System.out.println("Menor: " + b);
+		    }
+		    else {
+		        System.out.println("Mayor: " + b);
+		        System.out.println("Menor: " + a);
+		    }
+
+		    int diferencia = Math.abs(a - b);
+
+		    System.out.println("Diferencia absoluta: " + diferencia);
+
+		}
+	
+	//EJERCICIO 12
+	public static void tablaDivision() {
+
+		    int n;
+
+		    System.out.print("Ingrese un numero: ");
+		    n = sc.nextInt();
+
+		    for(int i = 1; i <= 10; i++) {
+
+		        if(i != 0) {
+		            double resultado = (double)n / i;
+		            System.out.println(n + " / " + i + " = " + resultado);
+		        }
+
+		    }
+
+		}
+	
+	//EJERCICIO 13
+	public static void contarDigitosPares() {
+
+		    int n;
+		    int contador = 0;
+
+		    System.out.print("Ingrese un numero: ");
+		    n = sc.nextInt();
+
+		    while(n > 0) {
+
+		        int digito = n % 10;
+
+		        if(digito % 2 == 0) {
+		            contador++;
+		        }
+
+		        n = n / 10;
+
+		    }
+
+		    System.out.println("Cantidad de digitos pares: " + contador);
+
+		}
+	
+	//EJERCICIO 14
+	public static void numeroTriangular() {
+
+		    int n;
+		    int suma = 0;
+		    int k = 1;
+
+		    System.out.print("Ingrese un numero: ");
+		    n = sc.nextInt();
+
+		    while(suma < n) {
+
+		        suma = suma + k;
+		        k++;
+
+		    }
+
+		    if(suma == n) {
+		        System.out.println("El numero es triangular");
+		    }
+		    else {
+		        System.out.println("El numero NO es triangular");
+		    }
+
+		}
+	
+	//EJERCICIO 15
+	public static void promedioNegativos() {
+
+		    int n;
+		    int numero;
+		    int contadorNegativos = 0;
+		    int sumaNegativos = 0;
+
+		    System.out.print("Ingrese la cantidad de numeros: ");
+		    n = sc.nextInt();
+
+		    for(int i = 1; i <= n; i++) {
+
+		        System.out.print("Ingrese un numero: ");
+		        numero = sc.nextInt();
+
+		        if(numero < 0) {
+		            sumaNegativos = sumaNegativos + numero;
+		            contadorNegativos++;
+		        }
+
+		    }
+
+		    if(contadorNegativos > 0) {
+
+		        double promedio = (double)sumaNegativos / contadorNegativos;
+		        System.out.println("Promedio de negativos: " + promedio);
+
+		    } else {
+
+		        System.out.println("No hay negativos");
+
+		    }
+
+		}
+	
 	
 	//SUBMENU PARTE 5 
 	public static void menuParte5() {
